@@ -1,10 +1,17 @@
 import dash
 import dash_html_components as html
 import dash_core_components as dbc
-import plotly.express as px
 from dash.dependencies import Input, Output
-# import pandas as pd
-# df=pd.Dataframe()
+import pandas as pd
+import plotly.express as px
+import os
+
+def create_pie():
+    df = pd.read_csv('pages/predictions.csv')
+    pie=px.pie(data_frame=df,names='status',values='predictions',color='status',hole=0.3,title='Scraped Reviews Pie Chart',template='presentation')
+    print('pie chart created successfully')
+    return pie
+
 
 def create_home_page():
     layout=html.Div(className='elementor-section-wrap',children=[
@@ -133,7 +140,7 @@ def create_home_page():
     ])
     ]),
     html.Section(children=[
-    dbc.Graph(id='pie-chart'),
+    dbc.Graph(id='pie-chart',figure=create_pie()),
     html.Div(className='elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2203917',children=[
     html.Div(className='elementor-widget-wrap elementor-element-populated',children=[
     html.Div(className='elementor-element elementor-element-9bb6e78 elementor-widget elementor-widget-text-editor',children=[
@@ -159,9 +166,8 @@ def create_home_page():
 
     return layout
 # @app.callback(
-#     Output("pie-chart", "figure"), 
-#     [Input("names", "value"), 
-#      Input("values", "value")])
+#     Output("pie-chart", "figure")
+# )
 # def generate_chart(names, values):
 #     fig = px.pie(df, values=values, names=names, title='Scraped Reviews Pie Chart')
 #     return fig
