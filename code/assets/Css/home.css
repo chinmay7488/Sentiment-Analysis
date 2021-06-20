@@ -1,0 +1,76 @@
+.elementor-section {
+    position: relative;
+}
+.elementor *, .elementor :after, .elementor :before {
+    box-sizing: border-box;
+}
+.elementor-column {
+    width: 100%;
+}
+.elementor-column, .elementor-column-wrap {
+    position: relative;
+    display: flex;
+}
+.elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+    padding: 10px;
+}
+.elementor-widget-wrap>.elementor-element {
+    width: 100%;
+}
+
+.elementor-section {
+    position: relative;
+}
+.elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 767px;
+}
+.elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+    padding: 10px;
+}
+.elementor-widget-wrap>.elementor-element {
+    width: 100%;
+}
+.elementor-widget {
+    position: relative;
+}
+.elementor *, .elementor :after, .elementor :before {
+    box-sizing: border-box;
+}
+.elementor-element .elementor-widget-container {
+    transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s;
+}
+.elementor *, .elementor :after, .elementor :before {
+    box-sizing: border-box;
+}
+.elementor-540 .elementor-element.elementor-element-f1a0483 .lae-uber-grid-container.lae-grid-auto-column-layout {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.elementor-540 .elementor-element.elementor-element-f1a0483 .lae-uber-grid-container {
+    column-gap: 30px;
+    row-gap: 30px;
+}
+.lae-piecharts {
+    clear: both;
+}
+.lae-uber-grid-container {
+    display: grid;
+}
+.lae-piechart {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+.lae-container *, .lae-container *::after, .lae-container *::before, .lae-uber-grid-container *, .lae-uber-grid-container *::after, .lae-uber-grid-container *::before, .lae-grid-container *, .lae-grid-container *::after, .lae-grid-container *::before {
+    box-sizing: inherit;
+}
+.lae-piechart .lae-label {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 55%;
+    max-width: 65%;
+    color: #888;
+}

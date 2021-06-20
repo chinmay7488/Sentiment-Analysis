@@ -1,0 +1,86 @@
+.elementor-section-image {
+    background-image: url('cloud.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    block-size: 360px;
+}
+.elementor *, .elementor :after, .elementor :before {
+    box-sizing: border-box;
+}
+div {
+    display: block;
+}
+.elementor-section {
+    position: relative;
+}
+.elementor-element.elementor-element-7ac9ca5 {
+    padding: 100px 0px 70px 0px;
+}
+.elementor-background-overlay, .elementor .elementor-background-slideshow {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+ .elementor-background-overlay {
+    background-color: #000000;
+    opacity: 0.3;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+section.elementor-section-boxed > .elementor-container {
+    max-width: 767px;
+}
+.elementor-column {
+    width: 100%;
+}
+.elementor *, .elementor :after, .elementor :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.elementor-543 .elementor-element .elementor-element-4a1c612 {
+    text-align: right;
+}
+.elementor-widget-wrap>.elementor-element {
+    width: 100%;
+}
+.elementor:not(.elementor-bc-flex-widget) .elementor-widget-wrap {
+    display: flex;
+}
+.elementor-widget-container-h1{
+    text-align: center;
+    padding-left: 74%;
+    padding-top: 14%;
+}
+.elementor-heading-title {
+    color: #6EC1E4;
+    font-family: "Aladin", Sans-serif;
+    text-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+    mix-blend-mode: overlay;
+}
+.elementor-widget-heading .elementor-heading-title {
+    margin: 0;
+}
+.wpforms-validate{
+    padding-left: 50%;
+}
+.wpforms-field-select{
+    width: 100%;
+}
+h1{
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    clear: both;
+    border: 0;
+    font-style: inherit;
+    vertical-align: baseline;
+    outline: 0;
+}
+.entry-content>:last-child, .entry-summary>:last-child, .page-content>:last-child {
+    margin-bottom: 0;
+}
+.elementor *, .elementor :after, .elementor :before {
+    box-sizing: border-box;
+}

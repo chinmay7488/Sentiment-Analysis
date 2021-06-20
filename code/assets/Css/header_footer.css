@@ -1,0 +1,53 @@
+.header{
+    display: block;
+}
+.header-div {
+    padding-right: 0;
+    flex-wrap: nowrap;
+    display: block;
+    justify-content: flex-end;
+    width: 100%;
+  }
+.header-div2{
+    border-top-width: 1px;
+    border-color: #eaeaea;
+    flex-wrap: wrap;
+    line-height: 3;
+}
+  /* Style the links inside the navigation bar */
+  .header-div a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 17px;
+    border-color:#eaeaea;
+    border-bottom-width: 1px;
+  }
+  
+  /* Change the color of links on hover */
+  .header-div a:hover {
+    color: #404040;
+  }
+  
+  /* Add a color to the active/current link */
+  .header-div a.active {
+    color: #fb2056;
+  }
+  .site-footer{
+    background-color: #191919; 
+    background-image: none;
+  }
+  .ast-builder-html-element{
+      text-align: center;
+      margin-top: 30px;
+      font-size: 1rem;
+      color: #d3d3d3;
+    }
+    .ast-footer-copyright{
+        text-align: center;
+        font-size: 1rem;
+        margin-bottom: 0px;
+        color: #d3d3d3;
+    }
