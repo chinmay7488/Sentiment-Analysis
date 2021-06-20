@@ -8,9 +8,8 @@ def create_header():
     html.Div(className='header-div', children=[
     html.Div(className='header-div2',children=[    
     html.A(href='',className='active',children='Home'),
-    html.A(href='',children='About'),
     html.A(href='',children='Review Check'),
-    html.A(href='project.py',children='Project'),
+    html.A(href='project.py',children='Word Cloud'),
     html.A(href='contact.py',children='Contact Me')
     ])
     ])
