@@ -2,10 +2,8 @@ import dash
 import dash_html_components as html
 import dash_core_components as dbc
 
-def create_Review_check_page():
-    layout=html.Article(className='post-542 page type-page status-publish ast-article-single', id='post-542',children=[
-    html.Header(className='entry-header ast-header-without-markup'),
-    html.Div(className='entry-content clear',children=[
+def create_checkreview_page():
+    layout=html.Div(className='entry-content clear',children=[
     html.Div(className='elementor elementor-542', children=[
     html.Div(className='elementor-section-wrap',children=[
     html.Section(className='elementor-section elementor-top-section elementor-element elementor-element-33a79095 elementor-section-boxed elementor-section-height-default elementor-section-height-default',children=[
@@ -22,12 +20,12 @@ def create_Review_check_page():
     html.Form(className='wpforms-validate wpforms-form',id='wpforms-form-680',children=[
     html.Div(className='wpforms-field-container',children=[
     html.Div(className='wpforms-field wpforms-field-text',id='wpforms-680-field_1-container',children=[
-    dbc.Input(className='wpforms-field-large',id='wpforms-680-field_1',type='text',placeholder='Enter Review')
+    dbc.Input(className='review-field-large',id='wpforms-680-field_1',type='text',placeholder='Enter Review')
     ])
     ])
     ]),
     html.Div(className='wpforms-submit-container',children=[
-    html.Button(type='submit',className='wpforms-submit ',id='wpforms-submit-680',children='Check Review')
+    html.Button(type='submit',className='check-review-submit',id='wpforms-submit-680',children='Check Review')
     ])
     ])
     ])
@@ -49,5 +47,4 @@ def create_Review_check_page():
     ])
     ])
     ])
-])
     return layout

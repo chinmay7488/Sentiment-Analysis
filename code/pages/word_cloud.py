@@ -14,7 +14,9 @@ def create_project_page(Scrapedreviews):
         html.Div(className='elementor-widget-wrap elementor-element-populated',children=[
         html.Div(className='elementor-element elementor-element-4a1c612 elementor-widget elementor-widget-heading',children=[
         html.Div(className='elementor-widget-container-h1',children=[
-            html.H1(className='elementor-heading-title elementor-size-default',children='Hello')
+        html.Marquee(children=[
+            html.H1(className='elementor-heading elementor-size-default',children='Hello')
+        ])  
         ])
         ])
         ])
@@ -31,11 +33,8 @@ def create_project_page(Scrapedreviews):
     html.Form(className='wpforms-validate wpforms-form',id='wpforms-form-598',children=[
     html.Div(className='wpforms-field-container',children=[
         html.Div(className='wpforms-field wpforms-field-select wpforms-field-select-style-classic',id='wpforms-598-field_1-container',children=[
-        dbc.Dropdown(id='dropdown',options=[{'label':i, 'value':i} for i in Scrapedreviews]),
+        dbc.Dropdown(id='review-dropdown',options=[{'label':i, 'value':i} for i in Scrapedreviews],style={"width": "100%"},multi=False,optionHeight = 100),
     ])
-    ]),
-    html.Div(className='wpforms-submit-container',children=[
-        html.Button(className='wpforms-submit ',id='wpforms-submit-598',type='submit',children='Check')
     ])
     ])
     ])
@@ -47,8 +46,8 @@ def create_project_page(Scrapedreviews):
     html.Div(className='elementor-element elementor-element-14f7fa4 elementor-widget elementor-widget-image',children=[
     html.Div(className='elementor-widget-container',children=[
         html.Figure(className='wp-caption',children=[
-            html.Img(src='https://media.giphy.com/media/11sBLVxNs7v6WA/giphy.gif',width=325,height=217,className='attachment-large size-large'),
-            html.H4(children=[html.Strong(children='Negative Review')])
+            html.Img(src='https://media.giphy.com/media/4Zt2BAmW8NNBe/giphy.gif',width=325,height=217,id='review-dropdown-gif'),
+            html.H4(id='review-type',children=[html.Strong(children='')])
         ])
     ])
     ])

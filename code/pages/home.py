@@ -25,7 +25,7 @@ def create_home_page():
     html.Div(className='elementor-widget-wrap elementor-element-populated',children=[
     html.Div(className='elementor-element elementor-element-3428592 elementor-widget elementor-widget-heading',children=[
     html.Div(className='elementor-widget-container',children=[
-        html.H4(className='elementor-heading-title elementor-size-default',children='Determine whether review is positive, negative or neutral.')
+        html.H4(className='h1-determine elementor-heading-title elementor-size-default',children='Determine whether review is positive, negative or neutral.')
         ])
     ]),
     html.Div(className='elementor-element elementor-element-92570e2 elementor-widget-divider--view-line elementor-widget elementor-widget-divider',children=[
@@ -42,9 +42,9 @@ def create_home_page():
     html.Div(className='elementor-element elementor-element-6d0d9cb elementor-align-center elementor-widget elementor-widget-button',children=[
     html.Div(className='elementor-widget-container',children=[
     html.Div(className='elementor-button-wrapper',children=[
-    html.A(className='elementor-button-link elementor-button elementor-size-sm elementor-animation-pulse-grow',href='',children=[
+    html.A(className='elementor-button-link elementor-button elementor-size-sm elementor-animation-pulse-grow',href='/check_review',children=[
     html.Span(className='elementor-button-content-wrapper',children=[
-    html.Span(className='elementor-button-text',children='Start Now')
+    html.Span(className='elementor-button-text',role='button',children='Start Now')
     ])
     ])
     ])

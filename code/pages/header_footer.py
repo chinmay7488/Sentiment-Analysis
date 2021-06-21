@@ -7,15 +7,15 @@ def create_header():
     html.Header(className='header',id='masthead', children=[
     html.Div(className='header-div', children=[
     html.Div(className='header-div2',children=[    
-    html.A(href='',className='active',children='Home'),
-    html.A(href='',children='Review Check'),
-    html.A(href='project.py',children='Word Cloud'),
-    html.A(href='contact.py',children='Contact Me')
+    html.A(href='/home',className='active',children='Home'),
+    html.A(href='/check_review',children='Check Review'),
+    html.A(href='/word_cloud',children='Word Cloud'),
+    html.A(href='/contact_me',children='Contact Me')
     ])
     ])
     ])
     ])
- 
+  
     return header_layout
 
 def create_footer():
