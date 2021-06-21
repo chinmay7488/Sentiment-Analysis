@@ -5,8 +5,8 @@ import dash_core_components as dbc
 
 def create_contact_page():
     layout=html.Div(className='elementor-section-wrap',children=[
-    html.Section(className='elementor-section-contact-page-one',children=[
-    html.Div(className='elementor-background-overlay'),
+    html.Section(className='elementor-section-contact-page-1',children=[
+    html.Div(className='elementor-background'),
     html.Div(className='elementor-container elementor-column-gap-default',children=[
     html.Div(className='elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-5b80d24',children=[
     html.Div(className='elementor-widget-wrap')
@@ -15,7 +15,7 @@ def create_contact_page():
     html.Div(className='elementor-widget-wrap elementor-element-populated',children=[
     html.Div(className='elementor-element elementor-element-a5e247a elementor-widget elementor-widget-heading',children=[
     html.Div(className='elementor-widget-container',children=[
-        html.H1(className='elementor-heading-title elementor-size-default',children='Contact Me')
+        html.H1(className='heading elementor-size-default',children='Contact Me')
     ])
     ])
     ])
@@ -36,7 +36,7 @@ def create_contact_page():
     html.Div(className='elementor-background-overlay'),
     html.Div(className='elementor-element elementor-element-74c0dbc elementor-widget elementor-widget-heading',children=[
     html.Div(className='elementor-widget-container',children=[
-    html.H1(className='elementor-heading-title elementor-size-default',children="We're Ready, Let's Talk.")
+    html.H2(className='heading-title elementor-size-default',children="We're Ready, Let's Talk.")
     ])
     ]),
     html.Div(className='elementor-element elementor-element-bef937d elementor-widget elementor-widget-shortcode',children=[
@@ -56,7 +56,7 @@ def create_contact_page():
     ])
     ]),
     html.Div(className='wpforms-submit-container',children=[
-        html.Button(id='submit',type='submit',children='Send Message',n_clicks=0)
+        html.Button(id='submit',type='submit',children='Send Message')
     ])
     ])
     ])

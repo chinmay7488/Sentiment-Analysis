@@ -1,0 +1,43 @@
+.elementor-section-contact-page-1{
+    background-image: url(about-bg-2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    block-size: 401px;
+}
+.elementor-background{
+    background-color: #000000;
+    opacity: 0.4;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    height: 64%;
+    width: 99%;
+    top: 5;
+    left: 5;
+    position: absolute;
+}
+.heading{
+    color: #ffffff;
+    margin: 0;
+    font-size: 70px;
+    position: relative;
+    left: 60px;
+    bottom: 100px;
+    width: 100%;
+}
+.heading-title{
+    color: #050000;
+    margin: 0;
+    font-size: 40px;
+    right: 400px;
+    position: relative;
+    bottom: 250px;
+    width: 100%;
+}
+.wpforms-container input[type=date], .wpforms-container input[type=datetime], .wpforms-container input[type=datetime-local], .wpforms-container input[type=email], .wpforms-container input[type=month], .wpforms-container input[type=number], .wpforms-container input[type=password], .wpforms-container input[type=range], .wpforms-container input[type=search], .wpforms-container input[type=tel], .wpforms-container input[type=text], .wpforms-container input[type=time], .wpforms-container input[type=url], .wpforms-container input[type=week], .wpforms-container select, .wpforms-container textarea {
+    display: block;
+    width: 100%;
+    float: none;
+}
+.wpforms-container input.wpforms-field-large, .wpforms-container select.wpforms-field-large, .wpforms-container .wpforms-field-row.wpforms-field-large {
+    max-width: 100%;
+}

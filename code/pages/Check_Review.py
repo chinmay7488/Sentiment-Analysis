@@ -22,7 +22,6 @@ def create_checkreview_page():
     html.Div(className='wpforms-field wpforms-field-text',id='wpforms-680-field_1-container',children=[
     dbc.Input(className='review-field-large',id='wpforms-680-field_1',type='text',placeholder='Enter Review')
     ])
-    ])
     ]),
     html.Div(className='wpforms-submit-container',children=[
     html.Button(type='submit',className='check-review-submit',id='wpforms-submit-680',children='Check Review')
@@ -33,12 +32,13 @@ def create_checkreview_page():
     ]),
     html.Div(className='elementor-element elementor-element-b4375f9 elementor-widget elementor-widget-image',children=[
     html.Div(className='elementor-widget-container',children=[
-    html.Img(height='217',width='325',src='sad.gif',className='attachment-medium_large size-medium_large')
+    html.Img(height='217',width='325',src='',className='attachment-medium_large size-medium_large')
     ])    
     ]),
     html.Div(className='elementor-element elementor-element-d727274 elementor-widget elementor-widget-text-editor',children=[
     html.Div(className='elementor-widget-container',children=[
     html.H4(children=[html.Strong(children='Negative Review')])
+    ])
     ])
     ])
     ])

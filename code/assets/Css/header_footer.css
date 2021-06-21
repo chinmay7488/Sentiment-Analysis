@@ -40,16 +40,17 @@
   .site-footer{
     background-color: #191919; 
     background-image: none;
+    block-size: 120px;
   }
   .ast-builder-html-element{
       text-align: center;
       margin-top: 30px;
-      font-size: 1rem;
+      font-size: 20px;
       color: #d3d3d3;
     }
     .ast-footer-copyright{
         text-align: center;
-        font-size: 1rem;
+        font-size: 20px;
         margin-bottom: 0px;
         color: #d3d3d3;
     }

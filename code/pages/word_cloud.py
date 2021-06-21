@@ -2,7 +2,7 @@ import dash
 import dash_html_components as html
 import dash_core_components as dbc
 
-def create_project_page(Scrapedreviews):
+def create_project_page(Scrapedreviews,freq_words):
     layout=html.Div(className='elementor-section-wrap',children=[
     html.Section(className='elementor-section elementor-section-image elementor-top-section elementor-element elementor-element-7ac9ca5 elementor-section-boxed elementor-section-height-default elementor-section-height-default',children=[
         html.Div(className='elementor-background-overlay'),
@@ -15,7 +15,7 @@ def create_project_page(Scrapedreviews):
         html.Div(className='elementor-element elementor-element-4a1c612 elementor-widget elementor-widget-heading',children=[
         html.Div(className='elementor-widget-container-h1',children=[
         html.Marquee(children=[
-            html.H1(className='elementor-heading elementor-size-default',children='Hello')
+            html.H1(className='elementor-heading elementor-size-default',children=str(freq_words))
         ])  
         ])
         ])

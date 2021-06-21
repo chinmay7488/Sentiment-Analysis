@@ -25,6 +25,11 @@ def load_model():
     global vocab
     file = open("models/vocab_pickle.pkl", 'rb') 
     vocab = pickle.load(file)
+
+    global freq
+    freq=' '
+    for i in get_top_n_words():
+        freq=freq+i[0]+", "
     
 
 
@@ -40,7 +45,7 @@ def get_top_n_words():
     vec = CountVectorizer().fit(scrappedReviews['Review'])
     bag_of_words = vec.transform(scrappedReviews['Review'])
     sum_words = bag_of_words.sum(axis=0) 
-    words_freq = [(word) for word, idx in vec.vocabulary_.items() if word not in stopwords.words('english')]
+    words_freq = [(word, sum_words[0, idx]) for word, idx in vec.vocabulary_.items() if word not in stopwords.words('english')]
     words_freq =sorted(words_freq, key = lambda x: x[1], reverse=True) 
     
     return words_freq[:21]
@@ -56,7 +61,7 @@ def display_page(pathname):
     if pathname == '/contact_me':
         return contact.create_contact_page()
     if pathname == '/word_cloud':
-        return word_cloud.create_project_page(scrappedReviews.sample(n=100)['Review'])
+        return word_cloud.create_project_page(scrappedReviews.sample(n=100)['Review'],freq)
     else:
         return "404 Page Error! Please choose a link"
 
@@ -99,6 +104,7 @@ def main():
         html.Div(id='page-content',children=[]),
         footer
     ])
+
     app.run_server()
 
 
