@@ -1,7 +1,7 @@
 import dash
 import dash_html_components as html
 import dash_core_components as dbc
-from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output, State
 from pages import header_footer,contact,check_review as check,home,word_cloud
 import pandas as pd
 import plotly.express as px
@@ -90,6 +90,36 @@ def update_app_ui2(review_text):
     else:
         result = 'Unknown'
         src='https://media.giphy.com/media/4Zt2BAmW8NNBe/giphy.gif'
+        
+    return result,src
+
+@app.callback(
+    [Output('h4-check-review',  'children' ),
+    Output('gif-check-review','src')
+    ],
+    [
+    Input('check-review-button','n_clicks')
+    ],
+    State('input-check-review', 'value')
+    )
+def check_review_page_button(n_clicks, review_text):
+    if n_clicks>0:
+        if review_text==None:
+            result=''
+            src='https://media.giphy.com/media/4Zt2BAmW8NNBe/giphy.gif'
+            return result,src
+        
+        response = check_review(review_text)
+
+        if (response[0] == 0):
+            result = 'Negative Review'
+            src='https://media.giphy.com/media/gGn9eq3prU6m4/giphy.gif'
+        elif  (response[0] == 1):
+            result = 'Positive Review'
+            src='https://media.giphy.com/media/11sBLVxNs7v6WA/giphy.gif'
+        else:
+            result = 'Unknown'
+            src='https://media.giphy.com/media/4Zt2BAmW8NNBe/giphy.gif'
         
     return result,src
 
