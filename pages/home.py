@@ -6,11 +6,13 @@ import pandas as pd
 import plotly.express as px
 import os
 
+
 def create_pie():
-    df = pd.read_csv('pages/predictions.csv')
-    pie=px.pie(data_frame=df,names='status',values='predictions',color='status',hole=0.3,title='Scraped Reviews Pie Chart',template='presentation')
-    print('pie chart created successfully')
-    return pie
+    df = pd.read_csv('predictions.csv')
+    values=df['predictions']
+    names=df['status'].value_counts()
+    pie1=px.pie(names=['Positive','Negative'], values=list(names), title='Scraped Reviews Pie Chart',template='presentation')
+    return pie1
 
 
 def create_home_page():
@@ -57,13 +59,13 @@ def create_home_page():
     ])
     ])
     ]),
-    html.Section(className='elementor-section elementor-top-section elementor-element elementor-element-5c31627 elementor-section-boxed elementor-section-height-default elementor-section-height-default',children=[
+    html.Section(className='elementor-section quote-section elementor-top-section elementor-element elementor-element-5c31627 elementor-section-boxed elementor-section-height-default elementor-section-height-default',children=[
     html.Div(className='elementor-container elementor-column-gap-default',children=[
     html.Div(className='elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-32f335d',children=[
     html.Div(className='elementor-widget-wrap elementor-element-populated',children=[
     html.Div(className='elementor-element elementor-element-afcd584 elementor-widget elementor-widget-image',children=[
     html.Div(className='elementor-widget-container',children=[
-    html.Img(className='attachment-large size-large',height=154,width=200)
+    html.Img(className='attachment-large size-large',height=154,width=200,src='https://www.passivhaustrust.org.uk/UserFiles/Image/Awards/2016/quote%20marks%20yellow.png')
     ])
     ])
     ])
@@ -145,7 +147,7 @@ def create_home_page():
     html.Div(className='elementor-widget-wrap elementor-element-populated',children=[
     html.Div(className='elementor-element elementor-element-9bb6e78 elementor-widget elementor-widget-text-editor',children=[
     html.Div(className='elementor-widget-container',children=[
-        html.P('I have extracted reviews from Etsy.com .')
+        html.P('I have extracted reviews from Etsy.com.')
     ])
     ])
     ])    
@@ -153,7 +155,7 @@ def create_home_page():
     html.Div(className='elementor-element elementor-element-bb759e4 elementor-align-center elementor-widget elementor-widget-button',children=[
     html.Div(className='elementor-widget-container',children=[
     html.Div(className='elementor-button-wrapper',children=[
-    html.A(className='elementor-button-link elementor-button elementor-size-sm elementor-animation-bounce-out',href='',children=[
+    html.A(className='elementor-button-link elementor-button elementor-size-sm elementor-animation-bounce-out',href='/check_review',children=[
         html.Span(className='elementor-button-content-wrapper',children=[
             html.Span(className='elementor-button-text',children='Try Now')
         ])
@@ -165,9 +167,3 @@ def create_home_page():
     ])
 
     return layout
-# @app.callback(
-#     Output("pie-chart", "figure")
-# )
-# def generate_chart(names, values):
-#     fig = px.pie(df, values=values, names=names, title='Scraped Reviews Pie Chart')
-#     return fig

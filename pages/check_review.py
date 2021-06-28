@@ -1,6 +1,7 @@
 import dash
 import dash_html_components as html
-import dash_core_components as dbc
+import dash_core_components as dcc
+import dash_bootstrap_components as dbc
 
 def create_checkreview_page():
     layout=html.Div(className='elementor-section-wrap',children=[
@@ -18,11 +19,11 @@ def create_checkreview_page():
         html.Form(className='wpforms-validate wpforms-form',id='wpforms-form-680',children=[
         html.Div(className='wpforms-field-container',children=[
         html.Div(className='wpforms-field wpforms-field-text',id='wpforms-680-field_1-container',children=[
-            dbc.Input(className='wpforms-field-large',id='input-check-review',type='text',placeholder='Enter Review',style = {'width':'50%', 'height':50})
+            dcc.Textarea(id='textarea-check-review',placeholder='Enter the Review here...',style = {'width':'300%', 'height':50})
         ])
         ]),
         html.Div(className='wpforms-submit-container',children=[
-            html.Button(className='check-review-button',id='wpforms-submit-680',type='submit',children='Check Review',n_clicks=0)
+            #dbc.Button(id='check-review-button',children='Check Review',n_clicks=0)
         ])
         ])
         ])
@@ -30,12 +31,12 @@ def create_checkreview_page():
         ]),
         html.Div(className='elementor-element elementor-element-b4375f9 elementor-widget elementor-widget-image',children=[
         html.Div(className='elementor-widget-container',children=[
-            html.Img(src='https://media.giphy.com/media/4Zt2BAmW8NNBe/giphy.gif',width=325,height=217,className='attachment-medium_large size-medium_large',id='gif-check-review')
+            html.Img(src='https://media.giphy.com/media/4Zt2BAmW8NNBe/giphy.gif',width=325,height=217,className='attachment-medium_large size-medium_large',id='gif')
         ])
         ]),
         html.Div(className='elementor-element elementor-element-d727274 elementor-widget elementor-widget-text-editor',children=[
         html.Div(className='elementor-widget-container',children=[
-            html.H4(className='elementor-widget-container',id='h4-check-review',children='')
+            html.H4(className='elementor-widget-container',id='h4',children='')
         ])
         ])
         ])

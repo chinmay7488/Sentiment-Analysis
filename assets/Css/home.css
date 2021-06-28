@@ -81,6 +81,17 @@
     background-size: cover;
     block-size: 700px;
 }
+/* .elementor-element-51af88c{
+    background-image: url('sentiment_analysis-2.jpg');
+    background-position: -9px -100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    block-size: 700px;
+}
+.elementor-540 .elementor-element.elementor-element-51af88c {
+    padding: 60px 20px 60px 20px;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+} */
 .elementor-540 .elementor-element.elementor-element-c50838b > .elementor-background-overlay {
     background-color: #040219;
     opacity: 0.55;
@@ -204,4 +215,41 @@ body .elementor-button.elementor-size-sm, body .elementor-button.elementor-size-
     position: relative;
     left: 400px;
     top: 250px;
+}
+.quote-section{
+    background-color: white;
+}
+.elementor-540 .elementor-element.elementor-element-5c31627 {
+    padding: 35px 0px 20px 0px;
+}
+.elementor-540 .elementor-element.elementor-element-5c31627:not(.elementor-motion-effects-element-type-background), .elementor-540 .elementor-element.elementor-element-5c31627 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-color: #f4f5f9;
+}
+.elementor-540 .elementor-element.elementor-element-5c31627 {
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+.elementor-section {
+    position: relative;
+}
+.elementor-column {
+    min-height: 1px;
+}
+.elementor-540 .elementor-element.elementor-element-a107e3a > .elementor-element-populated {
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+.elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+    padding: 10px;
+}
+.elementor-540 .elementor-element.elementor-element-32f335d.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
+    align-content: center;
+    align-items: center;
+}
+.elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+    padding: 10px;
+}
+.elementor-widget-wrap>.elementor-element {
+    width: 100%;
+}
+.quote-image{
+    width: 50%;
 }

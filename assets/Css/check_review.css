@@ -1,7 +1,3 @@
-.review-field-large{
-    display: block;
-    width: 200%;
-}
 .wpforms-container .wpforms-submit-container {
     padding: 10px 0 0 0;
     position: relative;
@@ -24,4 +20,11 @@
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
+}
+.elementor-element-33a79095{
+    background-image: url('sentiment_analysis-1.jpg');
+    background-position: -9px -100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    block-size: 500px;
 }

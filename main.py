@@ -31,6 +31,11 @@ def load_model():
     for i in get_top_n_words():
         freq=freq+i[0]+", "
     
+    global home_page,contact_page,check_page,word_page
+    home_page=home.create_home_page()
+    check_page=check.create_checkreview_page()
+    contact_page=contact.create_contact_page()
+    word_page= word_cloud.create_project_page(scrappedReviews.sample(n=100)['Review'],freq)
 
 
 def check_review(reviewText):
@@ -54,26 +59,23 @@ def get_top_n_words():
 @app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
 def display_page(pathname):
-    if pathname == '/home':
-        return home.create_home_page()
+    if pathname=='/home':
+        return home_page
     if pathname == '/check_review':
-        return check.create_checkreview_page()
+        return check_page
     if pathname == '/contact_me':
-        return contact.create_contact_page()
+        return contact_page
     if pathname == '/word_cloud':
-        return word_cloud.create_project_page(scrappedReviews.sample(n=100)['Review'],freq)
+        return word_page
     else:
-        return "404 Page Error! Please choose a link"
+        return home_page
 
 @app.callback(
     [Output('review-type',  'children' ),
-    Output('review-dropdown-gif','src')
-    ],
-    [
-    Input('review-dropdown', 'value')
-    ]
+    Output('review-dropdown-gif','src')],
+    [Input('review-dropdown', 'value')]
     )
-def update_app_ui2(review_text):
+def dropdown_review_check(review_text):
     if review_text==None:
         result=''
         src='https://media.giphy.com/media/4Zt2BAmW8NNBe/giphy.gif'
@@ -94,33 +96,27 @@ def update_app_ui2(review_text):
     return result,src
 
 @app.callback(
-    [Output('h4-check-review',  'children' ),
-    Output('gif-check-review','src')
-    ],
-    [
-    Input('check-review-button','n_clicks')
-    ],
-    State('input-check-review', 'value')
+    [Output('h4',  'children' ),
+    Output('gif','src')],
+    [Input('textarea-check-review', 'value')]
     )
-def check_review_page_button(n_clicks, review_text):
-    if n_clicks>0:
-        if review_text==None:
-            result=''
-            src='https://media.giphy.com/media/4Zt2BAmW8NNBe/giphy.gif'
-            return result,src
-        
-        response = check_review(review_text)
+def text_area_check_review(review_text):      
+    response = check_review(review_text)
+    if review_text==None:
+        result=''
+        src='https://media.giphy.com/media/4Zt2BAmW8NNBe/giphy.gif'
+        return result,src
 
-        if (response[0] == 0):
-            result = 'Negative Review'
-            src='https://media.giphy.com/media/gGn9eq3prU6m4/giphy.gif'
-        elif  (response[0] == 1):
-            result = 'Positive Review'
-            src='https://media.giphy.com/media/11sBLVxNs7v6WA/giphy.gif'
-        else:
-            result = 'Unknown'
-            src='https://media.giphy.com/media/4Zt2BAmW8NNBe/giphy.gif'
-        
+    if (response[0] == 0):
+        result = 'Negative Review'
+        src='https://media.giphy.com/media/gGn9eq3prU6m4/giphy.gif'
+    elif  (response[0] == 1):
+        result = 'Positive Review'
+        src='https://media.giphy.com/media/11sBLVxNs7v6WA/giphy.gif'
+    else:
+        result = 'Unknown'
+        src='https://media.giphy.com/media/4Zt2BAmW8NNBe/giphy.gif'
+
     return result,src
 
 def main():
@@ -129,14 +125,19 @@ def main():
     header =header_footer.create_header()
     footer=header_footer.create_footer()
     app.layout=html.Div(children=[
-        dbc.Location(id='url',refresh=False),
+        dbc.Location(id='url', refresh=False),
         header,
         html.Div(id='page-content',children=[]),
         footer
     ])
 
     app.run_server()
+    
 
 
 if __name__=='__main__':
     main()
+
+
+
+            
