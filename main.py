@@ -60,13 +60,13 @@ def get_top_n_words():
 @app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
 def display_page(pathname):
-    if pathname=='/home':
+    if pathname=='https://sentiment-analysis-ai.herokuapp.com/home':
         return home_page
-    if pathname == '/check_review':
+    if pathname == 'https://sentiment-analysis-ai.herokuapp.com/check_review':
         return check_page
-    if pathname == '/contact_me':
+    if pathname == 'https://sentiment-analysis-ai.herokuapp.com/contact_me':
         return contact_page
-    if pathname == '/word_cloud':
+    if pathname == 'https://sentiment-analysis-ai.herokuapp.com/word_cloud':
         return word_page
     else:
         return home_page
