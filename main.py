@@ -14,6 +14,7 @@ nltk.download('stopwords')
 
 app =dash.Dash(__name__)
 
+
 def load_model():
     global scrappedReviews
     scrappedReviews = pd.read_csv('ScrapedReviews.csv')
@@ -131,7 +132,7 @@ def main():
         footer
     ])
 
-    app.run_server()
+    server = app.server()
     
 
 
