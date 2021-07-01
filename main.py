@@ -60,7 +60,7 @@ def get_top_n_words():
 @app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
 def display_page(pathname):
-    if pathname=='https://sentiment-analysis-ai.herokuapp.com/':
+    if pathname=='https://sentiment-analysis-ai.herokuapp.com':
         return home_page
     if pathname == 'https://sentiment-analysis-ai.herokuapp.com/check_review':
         return check_page
@@ -126,10 +126,10 @@ def main():
     header =header_footer.create_header()
     footer=header_footer.create_footer()
     app.layout=html.Div(children=[
-       # dbc.Location(id='url', refresh=False),
-        #header,
-        html.Div(id='page-content',children=[html.H1('hello')])
-        #footer
+        dbc.Location(id='url', refresh=False),
+        header,
+        html.Div(id='page-content',children=[]),
+        footer
     ])
 
     app.run_server()
