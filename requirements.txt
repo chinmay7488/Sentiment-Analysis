@@ -3,5 +3,5 @@ pandas
 dash
 dash_bootstrap_components
 sklearn
-nltk
-pickle
+matplotlib
+wordcloud
