@@ -133,7 +133,7 @@ def main():
         footer
     ])
 
-    app.server()
+    app.run_server()
     
 
 
