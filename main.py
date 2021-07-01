@@ -13,6 +13,7 @@ from nltk.corpus import stopwords
 nltk.download('stopwords')
 
 app =dash.Dash(__name__)
+server = app.server
 
 
 def load_model():
@@ -132,7 +133,7 @@ def main():
         footer
     ])
 
-    server = app.server()
+    app.server()
     
 
 
