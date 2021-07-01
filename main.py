@@ -126,7 +126,7 @@ def main():
     header =header_footer.create_header()
     footer=header_footer.create_footer()
     app.layout=html.Div(children=[
-        dbc.Location(id='url', refresh=False),
+       # dbc.Location(id='url', refresh=False),
         header,
         html.Div(id='page-content',children=[]),
         footer
