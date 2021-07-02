@@ -9,7 +9,9 @@ import pickle
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_extraction.text import CountVectorizer
 import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
+
 
 app =dash.Dash(__name__)
 server = app.server
@@ -60,13 +62,13 @@ def get_top_n_words():
 @app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
 def display_page(pathname):
-    if pathname=='https://sentiment-analysis-ai.herokuapp.com':
+    if pathname=='/home':
         return home_page
-    if pathname == 'https://sentiment-analysis-ai.herokuapp.com/check_review':
+    if pathname == '/check_review':
         return check_page
-    if pathname == 'https://sentiment-analysis-ai.herokuapp.com/contact_me':
+    if pathname == '/contact_me':
         return contact_page
-    if pathname == 'https://sentiment-analysis-ai.herokuapp.com/word_cloud':
+    if pathname == '/word_cloud':
         return word_page
     else:
         return home_page
