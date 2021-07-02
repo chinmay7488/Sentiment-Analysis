@@ -130,16 +130,18 @@ def main():
     app.layout=html.Div(children=[
         dbc.Location(id='url', refresh=False),
         header,
-      # html.Div(id='page-content',children=[home_page]),
+        html.Div(id='page-content',children=home_page),
         footer
     ])
 
-    app.run_server()
+    
+    
     
 
 
 if __name__=='__main__':
     main()
+    app.run_server()
 
 
 
