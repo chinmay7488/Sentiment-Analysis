@@ -10,7 +10,7 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_extraction.text import CountVectorizer
 import nltk
 nltk.download('stopwords')
-from nltk.corpus import stopwords
+#from nltk.corpus import stopwords
 
 
 app =dash.Dash(__name__)
