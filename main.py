@@ -10,7 +10,7 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_extraction.text import CountVectorizer
 import nltk
 nltk.download('stopwords')
-#from nltk.corpus import stopwords
+from nltk.corpus import stopwords
 
 
 app =dash.Dash(__name__)
@@ -130,7 +130,7 @@ def main():
     app.layout=html.Div(children=[
         dbc.Location(id='url', refresh=False),
         header,
-        html.Div(id='page-content',children=[home_page]),
+      # html.Div(id='page-content',children=[home_page]),
         footer
     ])
 
