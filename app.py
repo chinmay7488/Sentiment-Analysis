@@ -2,7 +2,7 @@ import dash
 import dash_html_components as html
 import dash_core_components as dbc
 from dash.dependencies import Input, Output, State
-from pages import header_footer,contact,check_review as check,home,word_cloud
+from pages import header_footer,contact,check_review as check,home,word_cloud,about
 import pandas as pd
 import plotly.express as px
 import pickle
@@ -34,11 +34,12 @@ def load_model():
     for i in get_top_n_words():
         freq=freq+i[0]+", "
     
-    global home_page,contact_page,check_page,word_page
+    global home_page,contact_page,check_page,word_page,about_page
     home_page=home.create_home_page()
-    check_page=check.create_checkreview_page()
+    check_page=check.create_check_review_page()
     contact_page=contact.create_contact_page()
-    word_page= word_cloud.create_project_page(scrappedReviews.sample(n=100)['Review'],freq)
+    word_page= word_cloud.create_cloud_page(scrappedReviews.sample(n=100)['Review'],freq)
+    about_page=about.create_about_page()
 
 
 def check_review(reviewText):
@@ -70,6 +71,8 @@ def display_page(pathname):
         return contact_page
     if pathname == '/word_cloud':
         return word_page
+    if pathname == '/about':
+        return about_page
     else:
         return home_page
 
@@ -99,11 +102,12 @@ def dropdown_review_check(review_text):
     return result,src
 
 @app.callback(
-    [Output('h4',  'children' ),
-    Output('gif','src')],
-    [Input('textarea-check-review', 'value')]
+    [Output('check-review-h4',  'children' ),
+    Output('check-review-gif', 'src')],
+    [Input('check-review-btn', 'n_clicks')],
+    [State('textarea-check-review', 'value')]
     )
-def text_area_check_review(review_text):      
+def text_area_check_review(n_clicks,review_text):      
     response = check_review(review_text)
     if review_text==None:
         result=''
