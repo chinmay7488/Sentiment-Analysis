@@ -19,7 +19,7 @@ server = app.server
 
 def load_model():
     global scrappedReviews
-    scrappedReviews = pd.read_csv('ScrapedReviews.csv')
+    scrappedReviews = pd.read_csv('Dataset/ScrapedReviews.csv')
   
     global pickle_model
     file = open("models/model_pickle.pkl", 'rb') 
@@ -139,10 +139,6 @@ def main():
     ])
 
     
-    
-    
-
-
 if __name__=='__main__':
     main()
     app.run_server()

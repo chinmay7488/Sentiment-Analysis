@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.express as px
 
 def create_pie():
-    df = pd.read_csv('predictions.csv')
+    df = pd.read_csv('Dataset/predictions.csv')
     values=df['predictions']
     names=df['status'].value_counts()
     pie1=px.pie(names=['Positive','Negative'], values=list(names), title='Scraped Reviews Pie Chart',template='presentation')
